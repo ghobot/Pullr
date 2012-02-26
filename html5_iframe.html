@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" >
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      
+      footer {
+        margin: 0px 0px 0px 0px;
+        padding: 5px;
+/*        border-top: 1px solid #EEE;*/        
+        background-color: rgba(0, 0, 0, .7);
+        height: 3.5em;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1100;
+
+      }
+
+      footer h1 {
+        padding: 0px 0px 0px 20px;
+        background-color: none;
+        font-family: 'Armata', sans-serif;
+        font-size: 3em;
+        color: #eee;
+        margin: 0px 0px 0px 0px;
+      }
+
+      body { 
+        height: 100%;
+      /*radial-gradient(center, ellipse cover, rgba(209, 255, 255, 0) -15%,rgba(138, 187, 215, 1) 40%,rgba(6, 109, 171, 1) 76%)*/
+            background: rgb(197,222,234); /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover,  rgba(209, 255, 255, 0) -15%,rgba(138, 187, 215, 1) 40%,rgba(6, 109, 171, 1) 76%); /* FF3.6+ */
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(-15%,rgba(209, 255, 255, 0)), color-stop(40%,rgba(138,187,215,1)), color-stop(76%,rgba(6,109,171,1))); /* Chrome,Safari4+ */
+            background: -webkit-radial-gradient(center, ellipse cover,  rgba(209, 255, 255, 0) -15%,rgba(138, 187, 215, 1) 40%,rgba(6, 109, 171, 1) 76%); /* Chrome10+,Safari5.1+ */
+            background: -o-radial-gradient(center, ellipse cover,  rgba(209, 255, 255, 0) -15%,rgba(138, 187, 215, 1) 40%,rgba(6, 109, 171, 1) 76%); /* Opera 12+ */
+            background: -ms-radial-gradient(center, ellipse cover,  rgba(209, 255, 255, 0) -15%,rgba(138, 187, 215, 1) 40%,rgba(6, 109, 171, 1) 76%); /* IE10+ */
+            background: radial-gradient(center, ellipse cover,  rgba(209, 255, 255, 0) -15%,rgba(138, 187, 215, 1) 40%,rgba(6, 109, 171, 1) 76%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#066dab',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+            background-repeat:no-repeat;
+
+            }
+    </style>
+  </head>
+  <body>
+  
+  <div class="navbar navbar-fixed-top"> <!-- navbar -->
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="i-bar"></span>
+            <span class="i-bar"></span>
+            <span class="i-bar"></span>
+          </a>
+          <a class="brand" href="#">AUV Playlist Demo</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div> <!-- end of navbar -->
+<div class="container">
+    <div id="ytPlayerInfo" class="fade-in one"></div>
+    <div id="plot-form">
+      <input class="search-query span4" id="plots" type="text" size="14" placeholder="Enter the url of the plot">
+      <button id="plotsButton" class="btn btn-large btn-success"><i class="icon-play icon-white"></i>Play Plot</button>
+     <div id="pullr_status"></div>            
+    </div>
+
+    <div class="button_row fade-in one">
+      <button id="playButton" href="javascript:void(0);" onclick="play(0);" class="btn btn-large btn-success"><i class="icon-play"></i>PLAY</button>
+      <button id="pauseButton" onclick="paws('thePlayer0'); return false;" class="btn btn-large btn-primary"><i class="icon-pause"></i>PAUSE</button>
+    </div>
+    <div id="video_grid" class="row">
+      <!--  <div id="theTint" class="ytVideo1 zind-top"></div>
+       <div id="theGlow" class="ytVideo1 zind-top pulse"></div> -->
+    </div>    
+</div>
+<footer>
+  <h1>pULLr</h1>
+</footer>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+ <script src="pullr_v5.js"></script>
+</body>
+</html>
